@@ -131,6 +131,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/lge/mako/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
 
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=http://maxicm.com/mako/ota.xml
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608 \
