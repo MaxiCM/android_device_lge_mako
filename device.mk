@@ -34,15 +34,15 @@ PRODUCT_PACKAGES := \
     dhcpcd.conf \
     wpa_supplicant \
     wpa_supplicant.conf \
-    hostapd_default.conf \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf
+    hostapd_default.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
     wifi.supplicant_scan_interval=15
 
 PRODUCT_COPY_FILES += \
+    device/lge/mako/configs/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/lge/mako/configs/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/lge/mako/configs/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
     device/lge/mako/configs/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
     device/lge/mako/configs/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
