@@ -280,6 +280,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.hw.aac.encoder=true
 
+# OTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=http://maxicm.com/mako/ota.xml
+
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
